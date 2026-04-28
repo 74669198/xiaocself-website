@@ -1,53 +1,210 @@
 {{- with site.Params.homeInfoParams }}
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <div class="hero-badge">🚀 实战分享</div>
-        <h1>{{ .Title | markdownify }}</h1>
-    </header>
-    <div class="entry-content md-content">
-        {{ $opts := dict "display" "block" }}
-        {{ .Content | $.Page.RenderString $opts }}
-    </div>
-    <div class="hero-buttons">
-        <a href="/tutorials/claude-code-intro/" class="btn-primary">
-            <span>📖</span> 开始阅读
-        </a>
-        <a href="/cases/ai-tools-config/" class="btn-secondary">
-            <span>🔧</span> 实战案例
-        </a>
-    </div>
-    <footer class="entry-footer">
-        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
-    </footer>
-</article>
 
-<section class="feature-section">
-    <h2 class="section-title">📚 内容分类</h2>
-    <div class="feature-grid">
-        <a href="/tutorials/" class="feature-card">
-            <div class="feature-icon">📖</div>
-            <h3>入门教程</h3>
-            <p>从零开始学习 Claude Code 的安装、配置和基础用法</p>
-            <span class="feature-link">查看教程 →</span>
-        </a>
-        <a href="/cases/" class="feature-card">
-            <div class="feature-icon">🔧</div>
-            <h3>实战案例</h3>
-            <p>真实项目中的 Claude Code 应用记录和踩坑经验</p>
-            <span class="feature-link">查看案例 →</span>
-        </a>
-        <a href="/tools/" class="feature-card">
-            <div class="feature-icon">⚙️</div>
-            <h3>工具配置</h3>
-            <p>CC-Switch、OpenClaw、微信机器人等工具的配置指南</p>
-            <span class="feature-link">查看工具 →</span>
-        </a>
-        <a href="/about/" class="feature-card">
-            <div class="feature-icon">👋</div>
-            <h3>关于我</h3>
-            <p>了解小c的 Claude Code 成长之路和网站背后的故事</p>
-            <span class="feature-link">了解更多 →</span>
-        </a>
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-section">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="pulse"></span>
+      🚀 Claude Code 中文实战分享
     </div>
+    <h1 class="hero-title">
+      <span class="gradient-text">{{ .Title | markdownify }}</span>
+    </h1>
+    <p class="hero-desc">
+      这里记录我与 Claude Code 的故事——从入门到精通，从配置到实战。
+      <br>
+      目标是让每个人都能用好 AI 工具，提升10倍效率。
+    </p>
+    <div class="hero-actions">
+      <a href="/tutorials/claude-code-intro/" class="btn-glow">
+        📖 开始阅读
+      </a>
+      <a href="/cases/ai-tools-config/" class="btn-outline">
+        🔧 实战案例
+      </a>
+    </div>
+
+    {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+  </div>
 </section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number">4+</div>
+      <div class="stat-label">原创文章</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">3+</div>
+      <div class="stat-label">实战案例</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">5+</div>
+      <div class="stat-label">AI工具</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">∞</div>
+      <div class="stat-label">可能性</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED CONTENT ===== -->
+<section class="featured-section">
+  <div class="section-header">
+    <h2 class="section-title">🔥 热门内容</h2>
+    <p class="section-subtitle">精选最值得阅读的文章和案例</p>
+  </div>
+
+  <div class="featured-grid">
+    <a href="/tutorials/claude-code-intro/" class="featured-card featured-large">
+      <div class="featured-icon">🎯</div>
+      <div class="featured-content">
+        <span class="featured-tag">入门必读</span>
+        <h3>Claude Code 入门指南：从零开始</h3>
+        <p>什么是 Claude Code？它能做什么？如何安装？一篇搞定所有基础问题。</p>
+        <span class="featured-link">阅读全文 →</span>
+      </div>
+    </a>
+
+    <a href="/cases/ai-tools-config/" class="featured-card">
+      <div class="featured-icon">🤖</div>
+      <div class="featured-content">
+        <span class="featured-tag tag-purple">实战案例</span>
+        <h3>Claude Code + OpenClaw + 微信机器人完整搭建</h3>
+        <p>从零开始搭建 AI 微信机器人的完整流程记录，包含踩坑经验。</p>
+        <span class="featured-link">阅读全文 →</span>
+      </div>
+    </a>
+
+    <a href="/tutorials/cc-switch-setup/" class="featured-card">
+      <div class="featured-icon">⚡</div>
+      <div class="featured-content">
+        <span class="featured-tag tag-cyan">配置指南</span>
+        <h3>CC-Switch 配置指南：接入 Kimi/GLM</h3>
+        <p>让 Claude Code 使用国内大模型，解决网络问题，速度快成本低。</p>
+        <span class="featured-link">阅读全文 →</span>
+      </div>
+    </a>
+
+    <a href="/tools/hugo-cheatsheet/" class="featured-card">
+      <div class="featured-icon">📋</div>
+      <div class="featured-content">
+        <span class="featured-tag tag-green">速查表</span>
+        <h3>Hugo 建站速查表：常用命令与配置</h3>
+        <p>整理 Hugo 静态网站生成器的常用命令、目录结构和配置技巧。</p>
+        <span class="featured-link">阅读全文 →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="categories-section">
+  <div class="section-header">
+    <h2 class="section-title">📚 内容分类</h2>
+    <p class="section-subtitle">系统化的 Claude Code 学习资源</p>
+  </div>
+
+  <div class="categories-grid">
+    <a href="/tutorials/" class="category-card">
+      <div class="category-visual">
+        <div class="category-emoji">📖</div>
+      </div>
+      <div class="category-info">
+        <h3>教程</h3>
+        <p>从入门到进阶的系统性指南</p>
+        <div class="category-arrow">→</div>
+      </div>
+    </a>
+
+    <a href="/cases/" class="category-card">
+      <div class="category-visual">
+        <div class="category-emoji">🔧</div>
+      </div>
+      <div class="category-info">
+        <h3>案例</h3>
+        <p>真实项目实战记录</p>
+        <div class="category-arrow">→</div>
+      </div>
+    </a>
+
+    <a href="/tools/" class="category-card">
+      <div class="category-visual">
+        <div class="category-emoji">⚙️</div>
+      </div>
+      <div class="category-info">
+        <h3>工具</h3>
+        <p>AI 工具配置与使用技巧</p>
+        <div class="category-arrow">→</div>
+      </div>
+    </a>
+
+    <a href="/about/" class="category-card">
+      <div class="category-visual">
+        <div class="category-emoji">👋</div>
+      </div>
+      <div class="category-info">
+        <h3>关于</h3>
+        <p>了解小c的故事</p>
+        <div class="category-arrow">→</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section class="timeline-section">
+  <div class="section-header">
+    <h2 class="section-title">🛤️ 学习路径</h2>
+    <p class="section-subtitle">从零开始，循序渐进掌握 Claude Code</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-marker">1</div>
+      <div class="timeline-content">
+        <h4>入门阶段</h4>
+        <p>安装 Claude Code，了解基础功能，完成第一个任务</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">2</div>
+      <div class="timeline-content">
+        <h4>配置优化</h4>
+        <p>接入国内模型，配置 OpenClaw，搭建个人工作流</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">3</div>
+      <div class="timeline-content">
+        <h4>实战应用</h4>
+        <p>解决真实工作问题，搭建微信机器人，自动化日常任务</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">4</div>
+      <div class="timeline-content">
+        <h4>进阶提升</h4>
+        <p>团队协作、项目管理、效率最大化，成为 AI 工具专家</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2>准备好开始了吗？</h2>
+    <p>加入数千名开发者的行列，用 Claude Code 提升你的工作效率。</p>
+    <div class="cta-actions">
+      <a href="/tutorials/claude-code-intro/" class="btn-glow">🚀 立即开始</a>
+      <a href="/about/" class="btn-outline">👋 了解更多</a>
+    </div>
+  </div>
+</section>
+
 {{- end -}}
