@@ -3,7 +3,6 @@ date: '2026-04-28T19:11:27+08:00'
 draft: false
 title: '关于小c的自我修养'
 description: '关于这个网站和作者'
-layout: 'single'
 ---
 
 ## 关于我
