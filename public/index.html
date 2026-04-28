@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="en" dir="auto" data-theme="dark">
 
 <head>
 	<meta name="generator" content="Hugo 0.160.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
@@ -11,7 +11,7 @@
 <meta name="description" content="Claude Code 实战经验分享 | AI工具配置指南 | 效率提升技巧">
 <meta name="author" content="小c">
 <link rel="canonical" href="http://localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f4e53758b8a59e51802f8e84d71ae6ce919bfd8b0da61241a10cf6b1657b5346.css" integrity="sha256-9OU3WLilnlGAL46E1xrmzpGb/YsNphJBoQz2sWV7U0Y=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.33041c078db04322e5587df4fc9c9107e03db6add82720432192d5df2735237b.css" integrity="sha256-MwQcB42wQyLlWH30/JyRB&#43;A9tq3YJyBDIZLV3yc1I3s=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -30,40 +30,9 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-    </style>
 </noscript>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.querySelector("html").dataset.theme = 'light';
     }
 
@@ -129,12 +98,21 @@
 <main class="main"> 
 <article class="first-entry home-info">
     <header class="entry-header">
+        <div class="hero-badge">🚀 实战分享</div>
         <h1>Hi, I&rsquo;m 小c 👋</h1>
     </header>
     <div class="entry-content md-content">
         
         <p>这里记录我与 Claude Code 的故事——从入门到精通，从配置到实战，从个人效率到团队协作。目标是让每个人都能用好 AI 工具，提升10倍效率。</p>
 
+    </div>
+    <div class="hero-buttons">
+        <a href="/tutorials/claude-code-intro/" class="btn-primary">
+            <span>📖</span> 开始阅读
+        </a>
+        <a href="/cases/ai-tools-config/" class="btn-secondary">
+            <span>🔧</span> 实战案例
+        </a>
     </div>
     <footer class="entry-footer">
         <div class="social-icons" >
@@ -160,6 +138,36 @@
 
     </footer>
 </article>
+
+<section class="feature-section">
+    <h2 class="section-title">📚 内容分类</h2>
+    <div class="feature-grid">
+        <a href="/tutorials/" class="feature-card">
+            <div class="feature-icon">📖</div>
+            <h3>入门教程</h3>
+            <p>从零开始学习 Claude Code 的安装、配置和基础用法</p>
+            <span class="feature-link">查看教程 →</span>
+        </a>
+        <a href="/cases/" class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3>实战案例</h3>
+            <p>真实项目中的 Claude Code 应用记录和踩坑经验</p>
+            <span class="feature-link">查看案例 →</span>
+        </a>
+        <a href="/tools/" class="feature-card">
+            <div class="feature-icon">⚙️</div>
+            <h3>工具配置</h3>
+            <p>CC-Switch、OpenClaw、微信机器人等工具的配置指南</p>
+            <span class="feature-link">查看工具 →</span>
+        </a>
+        <a href="/about/" class="feature-card">
+            <div class="feature-icon">👋</div>
+            <h3>关于我</h3>
+            <p>了解小c的 Claude Code 成长之路和网站背后的故事</p>
+            <span class="feature-link">了解更多 →</span>
+        </a>
+    </div>
+</section>
 
 <article class="post-entry"> 
   <header class="entry-header">

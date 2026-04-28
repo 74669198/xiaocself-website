@@ -1,0 +1,53 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <div class="hero-badge">🚀 实战分享</div>
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content md-content">
+        {{ $opts := dict "display" "block" }}
+        {{ .Content | $.Page.RenderString $opts }}
+    </div>
+    <div class="hero-buttons">
+        <a href="/tutorials/claude-code-intro/" class="btn-primary">
+            <span>📖</span> 开始阅读
+        </a>
+        <a href="/cases/ai-tools-config/" class="btn-secondary">
+            <span>🔧</span> 实战案例
+        </a>
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+
+<section class="feature-section">
+    <h2 class="section-title">📚 内容分类</h2>
+    <div class="feature-grid">
+        <a href="/tutorials/" class="feature-card">
+            <div class="feature-icon">📖</div>
+            <h3>入门教程</h3>
+            <p>从零开始学习 Claude Code 的安装、配置和基础用法</p>
+            <span class="feature-link">查看教程 →</span>
+        </a>
+        <a href="/cases/" class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3>实战案例</h3>
+            <p>真实项目中的 Claude Code 应用记录和踩坑经验</p>
+            <span class="feature-link">查看案例 →</span>
+        </a>
+        <a href="/tools/" class="feature-card">
+            <div class="feature-icon">⚙️</div>
+            <h3>工具配置</h3>
+            <p>CC-Switch、OpenClaw、微信机器人等工具的配置指南</p>
+            <span class="feature-link">查看工具 →</span>
+        </a>
+        <a href="/about/" class="feature-card">
+            <div class="feature-icon">👋</div>
+            <h3>关于我</h3>
+            <p>了解小c的 Claude Code 成长之路和网站背后的故事</p>
+            <span class="feature-link">了解更多 →</span>
+        </a>
+    </div>
+</section>
+{{- end -}}
