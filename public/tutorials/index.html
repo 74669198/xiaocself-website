@@ -1,229 +1,31 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="dark">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>教程 | 小c的自我修养</title>
-<meta name="keywords" content="">
-<meta name="description" content="从入门到进阶的 Claude Code 使用指南">
-<meta name="author" content="小c">
-<link rel="canonical" href="http://localhost:1313/tutorials/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.9fbcb05f9bd227d29144e50b7f381b47a37b8a09f0b4f5ceb838cbc87e0e1442.css" integrity="sha256-n7ywX5vSJ9KRROULfzgbR6N7ignwtPXOuDjLyH4OFEI=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tutorials/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tutorials/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-</head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="header-nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="小c的自我修养 (Alt + H)">小c的自我修养</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu" class="menu">
-            <li>
-                <a href="http://localhost:1313/" title="首页">
-                    <span>首页</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tutorials/" title="教程">
-                    <span class="active">教程</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/cases/" title="案例">
-                    <span>案例</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tools/" title="工具">
-                    <span>工具</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/about/" title="关于">
-                    <span>关于</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
-    <a href='http://localhost:1313/'>Home</a></nav>
-  <h1>
-    教程
-    <a href="/tutorials/index.xml" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" height="23">
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
-      </svg>
-    </a>
-  </h1>
-  <div class="post-description">
-    从入门到进阶的 Claude Code 使用指南
-  </div>
-</header>
-<div class="post-content md-content"><p>欢迎来到教程专区！这里收录了 Claude Code 的系统性学习资源，从安装配置到高级技巧，帮你快速上手。</p>
-
-
-</div>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">CC-Switch 配置指南：接入 Kimi/GLM 等国内模型
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>为什么要用 CC-Switch？ Claude Code 默认连接 Anthropic 官方 API，在国内访问可能遇到：
+<!doctype html><html lang=en dir=auto data-theme=dark><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>教程 | 小c的自我修养</title><meta name=keywords content><meta name=description content="从入门到进阶的 Claude Code 使用指南"><meta name=author content="小c"><link rel=canonical href=https://xiaocself.top/tutorials/><link crossorigin=anonymous href=/assets/css/stylesheet.9fbcb05f9bd227d29144e50b7f381b47a37b8a09f0b4f5ceb838cbc87e0e1442.css integrity="sha256-n7ywX5vSJ9KRROULfzgbR6N7ignwtPXOuDjLyH4OFEI=" rel="preload stylesheet" as=style><link rel=icon href=https://xiaocself.top/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://xiaocself.top/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://xiaocself.top/favicon-32x32.png><link rel=apple-touch-icon href=https://xiaocself.top/apple-touch-icon.png><link rel=mask-icon href=https://xiaocself.top/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://xiaocself.top/tutorials/index.xml title=rss><link rel=alternate hreflang=en href=https://xiaocself.top/tutorials/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><script>localStorage.getItem("pref-theme")==="light"&&(document.querySelector("html").dataset.theme="light")</script><meta property="og:url" content="https://xiaocself.top/tutorials/"><meta property="og:site_name" content="小c的自我修养"><meta property="og:title" content="教程"><meta property="og:description" content="从入门到进阶的 Claude Code 使用指南"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="教程"><meta name=twitter:description content="从入门到进阶的 Claude Code 使用指南"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"教程","item":"https://xiaocself.top/tutorials/"}]}</script></head><body class=list id=top><header class=header><nav class=header-nav><div class=logo><a href=https://xiaocself.top/ accesskey=h title="小c的自我修养 (Alt + H)">小c的自我修养</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=https://xiaocself.top/ title=首页><span>首页</span></a></li><li><a href=https://xiaocself.top/tutorials/ title=教程><span class=active>教程</span></a></li><li><a href=https://xiaocself.top/cases/ title=案例><span>案例</span></a></li><li><a href=https://xiaocself.top/tools/ title=工具><span>工具</span></a></li><li><a href=https://xiaocself.top/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=https://xiaocself.top/>Home</a></nav><h1>教程
+<a href=/tutorials/index.xml title=RSS aria-label=RSS><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" height="23"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a></h1><div class=post-description>从入门到进阶的 Claude Code 使用指南</div></header><div class="post-content md-content"><p>欢迎来到教程专区！这里收录了 Claude Code 的系统性学习资源，从安装配置到高级技巧，帮你快速上手。</p></div><article class=post-entry><figure class=entry-cover><img loading=lazy src=https://xiaocself.top/images/tips-cover.png alt="Claude Code 技巧"></figure><header class=entry-header><h2 class=entry-hint-parent>Claude Code 高效使用技巧：从入门到丝滑</h2></header><div class=entry-content><p>写在前面 用 Claude Code 一个月后，我发现大多数人只发挥了它 30% 的能力。不是功能太难，而是不知道有这功能。
+这篇整理了我日常最高频的 10 个技巧，帮你从"能用"进化到"丝滑"。
+技巧一：善用 @ 符号快速引用 在对话中输入 @，Claude Code 会弹出文件选择器。这比口述文件名准确 100 倍：
+@src/components/Button.tsx 这个组件的样式需要调整 进阶用法：
+@src/**/*.tsx — 引用整个目录 @README.md — 引用项目文档 @package.json — 引用配置文件 为什么重要：Claude 的上下文窗口有限，精准引用文件 = 节省 token = 更准确的回答。
+技巧二：用 / 命令快速切换模式 Claude Code 支持斜杠命令：
+命令 作用 /clear 清空当前对话上下文 /compact 压缩对话，保留关键信息 /cost 查看当前会话的 token 消耗 /help 显示所有可用命令 我最常用的是 /compact。当对话长了（20+ 轮），Claude 开始"失忆"时，输入 /compact 让它总结一下前面的内容，然后继续。比重启会话更省时间。
+技巧三：批量操作用 “全部” 和 “每个” 不要一次说一个文件，让 Claude 批量处理：
+❌ 低效：
+...</p></div><footer class=entry-footer><span title='2026-04-29 20:30:00 +0800 CST'>April 29, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>286 words</span>&nbsp;·&nbsp;<span>小c</span></footer><a class=entry-link aria-label="post link to Claude Code 高效使用技巧：从入门到丝滑" href=https://xiaocself.top/tutorials/claude-code-tips/></a></article><article class=post-entry><figure class=entry-cover><img loading=lazy src=https://xiaocself.top/images/hooks-cover.png alt="Claude Code Hooks"></figure><header class=entry-header><h2 class=entry-hint-parent>Claude Code Hooks 配置实战：让 AI 自动帮你收尾</h2></header><div class=entry-content><p>为什么需要 Hooks？ 用 Claude Code 写代码时，我最烦的一件事是：它帮我改完代码，我还得手动跑一遍格式化、跑一遍测试，确认没问题才能提交。
+Hooks 就是来解决这个问题的。配置好 Hooks，Claude Code 每完成一次文件写入或编辑，就会自动触发你预设的命令。
+打个比方：
+没有 Hooks = 请了个助理，但整理文档、检查错误还得你自己来 有 Hooks = 助理写完直接帮你排版、校对、归档，你只管看结果 Hooks 能做什么？ Claude Code 支持多种事件触发：
+事件 触发时机 常用场景 PostToolUse 工具执行成功后 文件格式化、自动测试、构建验证 PreToolUse 工具执行前 命令日志记录、权限检查 PreCompact 会话压缩前 保存重要上下文 Stop 会话结束时 生成总结、发送通知 最常用的是 PostToolUse，下面重点讲。
+实战配置一：自动格式化代码 我用的最多的是 Prettier。每次 Claude 写完 JS/TS/CSS，自动格式化：
+{ "hooks": { "PostToolUse": [{ "matcher": "Write|Edit", "hooks": [{ "type": "command", "command": "jq -r '.tool_response.filePath // .tool_input.file_path' | { read -r f; prettier --write \"$f\"; } 2>/dev/null || true" }] }] } } 效果：Claude 刚写完一个文件，Prettier 立刻跑一遍，代码风格统一。
+...</p></div><footer class=entry-footer><span title='2026-04-29 19:30:00 +0800 CST'>April 29, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>344 words</span>&nbsp;·&nbsp;<span>小c</span></footer><a class=entry-link aria-label="post link to Claude Code Hooks 配置实战：让 AI 自动帮你收尾" href=https://xiaocself.top/tutorials/claude-code-hooks/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>CC-Switch 配置指南：接入 Kimi/GLM 等国内模型</h2></header><div class=entry-content><p>为什么要用 CC-Switch？ Claude Code 默认连接 Anthropic 官方 API，在国内访问可能遇到：
 网络不稳定 响应速度慢 偶尔无法连接 CC-Switch 是解决这个问题的神器——它让 Claude Code 可以无缝切换到国内大模型（Kimi、GLM、通义千问等），速度快、稳定性高。
 前置准备 Claude Code 已安装（见入门指南） 有火山引擎/智谱AI/阿里云的 API Key 安装 CC-Switch # 全局安装 npm install -g cc-switch # 验证安装 cc-switch --version 配置 Kimi 模型（推荐） 1. 获取 API Key 登录 火山引擎 → 创建接入点 → 复制 API Key
-2. 配置环境变量 # 添加到 ~/.zshrc 或 ~/.bashrc export ANTHROPIC_BASE_URL=&#34;https://ark.cn-beijing.volces.com/api/coding&#34; export ANTHROPIC_AUTH_TOKEN=&#34;你的API-Key&#34; export ANTHROPIC_MODEL=&#34;Kimi-K2.5&#34; 3. 应用配置 source ~/.zshrc # 验证 claude 如果看到 Claude Code 正常启动，并且回复内容来自 Kimi，说明配置成功！
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-04-28 19:11:38 +0800 CST'>April 28, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>170 words</span>&nbsp;·&nbsp;<span>小c</span></footer>
-  <a class="entry-link" aria-label="post link to CC-Switch 配置指南：接入 Kimi/GLM 等国内模型" href="http://localhost:1313/tutorials/cc-switch-setup/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Claude Code 入门指南：从零开始
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>什么是 Claude Code？ Claude Code 是 Anthropic 推出的 AI 编程助手，但它不仅仅是写代码的工具。
+2. 配置环境变量 # 添加到 ~/.zshrc 或 ~/.bashrc export ANTHROPIC_BASE_URL="https://ark.cn-beijing.volces.com/api/coding" export ANTHROPIC_AUTH_TOKEN="你的API-Key" export ANTHROPIC_MODEL="Kimi-K2.5" 3. 应用配置 source ~/.zshrc # 验证 claude 如果看到 Claude Code 正常启动，并且回复内容来自 Kimi，说明配置成功！
+...</p></div><footer class=entry-footer><span title='2026-04-28 19:11:38 +0800 CST'>April 28, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>170 words</span>&nbsp;·&nbsp;<span>小c</span></footer><a class=entry-link aria-label="post link to CC-Switch 配置指南：接入 Kimi/GLM 等国内模型" href=https://xiaocself.top/tutorials/cc-switch-setup/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Claude Code 入门指南：从零开始</h2></header><div class=entry-content><p>什么是 Claude Code？ Claude Code 是 Anthropic 推出的 AI 编程助手，但它不仅仅是写代码的工具。
 在我看来，它更像是一个24小时在线的超级助理：
 帮你写文档、做表格 帮你分析数据、整理材料 帮你配置工具、搭建系统 甚至帮你管理项目、复盘经验 它能做什么？ 1. 代码开发 写代码、改 Bug、重构项目 支持多种语言（Python、JavaScript、Go 等） 可以操作文件系统（读写、创建、删除） 2. 文档处理 写 Markdown、Word、PPT 整理会议纪要、工作报告 生成标准化文档（报备、申请、方案） 3. 数据分析 处理 Excel、CSV 数据 生成统计图表 数据清洗和转换 4. 系统配置 配置开发环境 搭建网站、部署服务 管理服务器和数据库 5. 项目管理 制定计划、分解任务 跟踪进度、监控风险 复盘总结、知识沉淀 如何安装？ macOS # 通过 Homebrew 安装 brew install claude-code # 验证安装 claude --version Windows # 通过 npm 安装 npm install -g @anthropic-ai/claude-code Linux # 通过 npm 安装 npm install -g @anthropic-ai/claude-code 首次配置 1. 登录 claude 首次运行会提示登录，按指引完成即可。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-04-28 19:11:38 +0800 CST'>April 28, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>147 words</span>&nbsp;·&nbsp;<span>小c</span></footer>
-  <a class="entry-link" aria-label="post link to Claude Code 入门指南：从零开始" href="http://localhost:1313/tutorials/claude-code-intro/"></a>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">小c的自我修养</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
-        <polyline points="17 11 12 6 7 11"></polyline>
-        <polyline points="17 18 12 13 7 18"></polyline>
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var toplink = document.getElementById("top-link");
-    window.onscroll = function () {
-        const scrollThreshold = window.innerHeight;
-        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-            toplink.classList.remove("hidden");
-        } else {
-            toplink.classList.add("hidden");
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+...</p></div><footer class=entry-footer><span title='2026-04-28 19:11:38 +0800 CST'>April 28, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>147 words</span>&nbsp;·&nbsp;<span>小c</span></footer><a class=entry-link aria-label="post link to Claude Code 入门指南：从零开始" href=https://xiaocself.top/tutorials/claude-code-intro/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://xiaocself.top/>小c的自我修养</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link");window.onscroll=function(){const e=window.innerHeight;document.body.scrollTop>e||document.documentElement.scrollTop>e?toplink.classList.remove("hidden"):toplink.classList.add("hidden")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
