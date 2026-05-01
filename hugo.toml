@@ -42,6 +42,11 @@ theme = 'PaperMod'
   favicon32x32 = "/favicon-32x32.png"
   apple_touch_icon = "/apple-touch-icon.png"
   safari_pinned_tab = "/safari-pinned-tab.svg"
+  disableHLJS = false
+
+[params.seo]
+  enableRobotsTXT = true
+  noindex = false
 
 [[menu.main]]
   identifier = 'home'
@@ -75,6 +80,17 @@ theme = 'PaperMod'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "index"
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
 
 [markup.goldmark.renderer]
   unsafe = true
