@@ -95,5 +95,6 @@ theme = 'PaperMod'
 [markup.goldmark.renderer]
   unsafe = true
 
-# Google Analytics — 替换为你的 GA4 Measurement ID
-googleAnalytics = 'G-XXXXXXXXXX'
+[services]
+  [services.googleAnalytics]
+    ID = 'G-D66GS4LMX1'
