@@ -1,4 +1,4 @@
-baseURL = 'https://xiaocself.top'
+baseURL = 'https://www.xiaocself.top'
 languageCode = 'zh-CN'
 title = '小c的自我修养'
 theme = 'PaperMod'
@@ -94,3 +94,6 @@ theme = 'PaperMod'
 
 [markup.goldmark.renderer]
   unsafe = true
+
+# Google Analytics — 替换为你的 GA4 Measurement ID
+googleAnalytics = 'G-XXXXXXXXXX'
