@@ -1,0 +1,148 @@
+{{- define "main" }}
+
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- partial "index_profile.html" . }}
+{{- else }}
+
+{{- if not .IsHome | and .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>
+    {{ .Title }}
+    {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
+    {{- with .OutputFormats.Get "rss" }}
+    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+    {{- end }}
+    {{- end }}
+  </h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content md-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+{{- $pages := union .RegularPages .Sections }}
+
+{{- if .IsHome }}
+{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- end }}
+
+{{- $paginator := .Paginate $pages }}
+
+{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
+{{- $term := .Data.Term }}
+
+{{- if .IsHome }}
+{{- /* Bento Grid for Homepage */ -}}
+<section class="bento-section">
+  <div class="section-header">
+    <h2 class="section-title">最新文章</h2>
+    <p class="section-subtitle">探索 AI 工具的实战经验与深度思考</p>
+  </div>
+  <div class="bento-grid">
+    {{- range $index, $page := $paginator.Pages }}
+    {{- $class := "bento-card" }}
+    {{- if eq $index 0 }}
+      {{- $class = "bento-card bento-large" }}
+    {{- else if eq $index 3 }}
+      {{- $class = "bento-card bento-wide" }}
+    {{- end }}
+
+    <article class="{{ $class }}" data-category="{{ $page.Section }}" data-index="{{ $index }}">
+      {{- $isHidden := ($page.Param "cover.hiddenInList") | default ($page.Param "cover.hidden") | default false }}
+      {{- partial "cover.html" (dict "cxt" $page "IsSingle" false "isHidden" $isHidden) }}
+      <div class="bento-content">
+        <div class="bento-meta">
+          <span class="bento-category">{{ $page.Section }}</span>
+          <span class="bento-date">{{ $page.Date.Format "2006-01-02" }}</span>
+        </div>
+        <h2 class="bento-title">
+          <a href="{{ $page.Permalink }}" aria-label="post link to {{ $page.Title | plainify }}">{{ $page.Title }}</a>
+        </h2>
+        {{- if (ne ($page.Param "hideSummary") true) }}
+        <p class="bento-summary">{{ $page.Summary | plainify | htmlUnescape }}{{ if $page.Truncated }}...{{ end }}</p>
+        {{- end }}
+        {{- if not ($page.Param "hideMeta") }}
+        <div class="bento-footer">
+          {{- partial "post_meta.html" $page -}}
+        </div>
+        {{- end }}
+      </div>
+      <a class="entry-link" aria-label="post link to {{ $page.Title | plainify }}" href="{{ $page.Permalink }}"></a>
+    </article>
+    {{- end }}
+  </div>
+</section>
+{{- else }}
+{{- /* Standard compact list for category/tag pages */ -}}
+<div class="compact-list">
+  {{- range $index, $page := $paginator.Pages }}
+  <article class="compact-entry">
+    <div class="compact-main">
+      <div class="compact-meta-top">
+        <span class="compact-category">{{ $page.Section }}</span>
+        <span class="compact-sep">·</span>
+        <span class="compact-date">{{ $page.Date.Format "2006-01-02" }}</span>
+      </div>
+      <h2 class="compact-title">
+        <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+      </h2>
+      {{- if (ne ($page.Param "hideSummary") true) }}
+      <p class="compact-summary">{{ $page.Summary | plainify | htmlUnescape }}{{ if $page.Truncated }}...{{ end }}</p>
+      {{- end }}
+    </div>
+    {{- $isHidden := ($page.Param "cover.hiddenInList") | default ($page.Param "cover.hidden") | default false }}
+    {{- partial "cover.html" (dict "cxt" $page "IsSingle" false "isHidden" $isHidden) }}
+    <a class="entry-link" aria-label="post link to {{ $page.Title | plainify }}" href="{{ $page.Permalink }}"></a>
+  </article>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
+      «&nbsp;{{ i18n "prev_page" }}&nbsp;
+      {{- if (.Param "ShowPageNums") }}
+      {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
+      {{- end }}
+    </a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">
+      {{- i18n "next_page" }}&nbsp;
+      {{- if (.Param "ShowPageNums") }}
+      {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
+      {{- end }}&nbsp;»
+    </a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+
+{{- end }}
+
+{{- end }}

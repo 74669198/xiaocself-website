@@ -1,31 +1,76 @@
 {{- with site.Params.homeInfoParams }}
 <section class="hero-section">
   <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-avatar">
-      <img src="/avatar.svg" alt="小c" width="82" height="82">
+  <div class="hero-container">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        Claude Code 中文实战分享
+      </div>
+      <h1 class="hero-title">
+        <span class="gradient-text">{{ .Title | markdownify }}</span>
+      </h1>
+      <p class="hero-desc">
+        这里记录我与 Claude Code 的故事——从入门到精通，从配置到实战。
+        目标是让每个人都能用好 AI 工具，提升10倍效率。
+      </p>
+      <div class="hero-actions">
+        <a href="/tutorials/claude-code-intro/" class="btn-glow">
+          <span>开始阅读</span>
+        </a>
+        <a href="/cases/ai-tools-config/" class="btn-outline">
+          <span>实战案例</span>
+        </a>
+      </div>
+      {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </div>
-    <div class="hero-badge">
-      <span class="pulse"></span>
-      Claude Code 中文实战分享
+    <div class="hero-right">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">xiaocself — zsh</div>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="terminal-prompt">~</span>
+            <span class="terminal-cursor">$</span>
+            <span class="terminal-command"> claude</span>
+          </div>
+          <div class="terminal-line terminal-output">
+            <span>✓ Connected to Claude (Claude Sonnet 4.6)</span>
+          </div>
+          <div class="terminal-line terminal-output">
+            <span>✓ Working directory: /xiaocself/website</span>
+          </div>
+          <div class="terminal-line terminal-output">
+            <span>➜ 让我帮你重构这个网站的布局...</span>
+          </div>
+          <div class="terminal-line terminal-output">
+            <span class="terminal-comment">  分析当前布局问题 → 设计差异化方案 → 执行改造</span>
+          </div>
+          <div class="terminal-line">
+            <span class="terminal-prompt">xiaocself/website</span>
+            <span class="terminal-cursor">$</span>
+            <span class="terminal-command"> hugo server</span>
+          </div>
+          <div class="terminal-line terminal-output">
+            <span class="terminal-success">✓ 144 pages built in 118ms</span>
+          </div>
+          <div class="terminal-line terminal-output">
+            <span class="terminal-success">✓ Web Server available at http://localhost:1313/</span>
+          </div>
+          <div class="terminal-line">
+            <span class="terminal-prompt">xiaocself/website</span>
+            <span class="terminal-cursor">$</span>
+            <span class="terminal-cursor-blink">_</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <h1 class="hero-title">
-      <span class="gradient-text">{{ .Title | markdownify }}</span>
-    </h1>
-    <p class="hero-desc">
-      这里记录我与 Claude Code 的故事——从入门到精通，从配置到实战。
-      <br>
-      目标是让每个人都能用好 AI 工具，提升10倍效率。
-    </p>
-    <div class="hero-actions">
-      <a href="/tutorials/claude-code-intro/" class="btn-glow">
-        <span>开始阅读</span>
-      </a>
-      <a href="/cases/ai-tools-config/" class="btn-outline">
-        <span>实战案例</span>
-      </a>
-    </div>
-    {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
   </div>
 </section>
 {{- end -}}
