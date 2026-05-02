@@ -5,8 +5,8 @@ theme = 'PaperMod'
 
 [params]
   author = '小c'
-  description = 'Claude Code 实战经验分享 | AI工具配置指南 | 效率提升技巧'
-  keywords = ['Claude Code', 'AI工具', '效率提升', '自动化', '微信机器人']
+  description = 'AI 工具实战经验分享 | Claude Code、Kimi、自动化工作流 | 让每个人都能用好 AI'
+  keywords = ['Claude Code', 'AI工具', '效率提升', '自动化', '微信机器人', 'Kimi', 'AI工作流']
   defaultTheme = 'dark'
   ShowReadingTime = true
   ShowShareButtons = true
