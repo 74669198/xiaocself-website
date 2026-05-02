@@ -73,6 +73,12 @@ theme = 'PaperMod'
   weight = 40
 
 [[menu.main]]
+  identifier = 'toolbox'
+  name = '工具箱'
+  url = '/toolbox/'
+  weight = 45
+
+[[menu.main]]
   identifier = 'about'
   name = '关于'
   url = '/about/'
