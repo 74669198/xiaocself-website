@@ -85,6 +85,12 @@ theme = 'PaperMod'
   weight = 50
 
 [[menu.main]]
+  identifier = 'search'
+  name = '搜索'
+  url = '/search/'
+  weight = 55
+
+[[menu.main]]
   identifier = 'privacy'
   name = '隐私政策'
   url = '/privacy/'
@@ -106,6 +112,16 @@ theme = 'PaperMod'
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  limit = 10
+  keys = ["title", "permalink", "summary", "content"]
 
 [services]
   [services.googleAnalytics]
