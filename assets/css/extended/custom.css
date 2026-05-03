@@ -365,7 +365,7 @@ html, body, .header, .nav {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: var(--space-8);
-  max-width: var(--container-xl);
+  max-width: var(--container-lg);
   margin: 0 auto;
   width: 100%;
   align-items: center;
@@ -728,34 +728,19 @@ html, body, .header, .nav {
    ============================================ */
 
 .featured-section {
-  padding: var(--space-7) 0 var(--space-7) var(--space-4);
-  max-width: var(--container-xl);
+  padding: var(--space-7) var(--space-4);
+  max-width: var(--container-lg);
   margin: 0 auto;
 }
 
 .featured-scroll {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-4);
-  overflow-x: auto;
-  padding-bottom: var(--space-3);
-  padding-right: var(--space-4);
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--border-default) transparent;
-}
-
-.featured-scroll::-webkit-scrollbar {
-  height: 4px;
-}
-
-.featured-scroll::-webkit-scrollbar-thumb {
-  background: var(--border-default);
-  border-radius: var(--radius-full);
 }
 
 .featured-scroll-card {
-  flex: 0 0 300px;
+  flex: unset;
   display: flex;
   flex-direction: column;
   background: var(--bg-secondary);
@@ -1224,7 +1209,7 @@ html, body, .header, .nav {
 }
 
 .footer-inner {
-  max-width: var(--container-xl);
+  max-width: var(--container-lg);
   margin: 0 auto;
   padding: var(--space-7) var(--space-4) var(--space-5);
 }
@@ -1321,12 +1306,13 @@ html, body, .header, .nav {
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: var(--space-4);
   flex-wrap: wrap;
-  gap: var(--space-3);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
+  text-align: center;
 }
 
 .footer-bottom a {
