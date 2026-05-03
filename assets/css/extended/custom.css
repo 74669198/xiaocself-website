@@ -171,6 +171,9 @@
 
 .main {
   padding-top: 0;
+  max-width: 100% !important;
+  margin: 0 !important;
+  width: 100% !important;
 }
 
 * {
