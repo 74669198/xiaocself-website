@@ -1625,6 +1625,15 @@ html, body, .header, .nav {
   margin-right: auto;
 }
 
+/* 列表页宽度限制 */
+.page-header,
+.compact-list,
+.main > .post-content {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* TOC 固定侧边栏 */
 .post-single {
   position: relative;
