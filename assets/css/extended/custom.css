@@ -1619,7 +1619,9 @@ html, body, .header, .nav {
 
 /* 文章正文宽度限制，保证阅读舒适度 */
 .post-single .post-content,
-.post-single .post-header {
+.post-single .post-header,
+.post-single .post-body,
+.post-single .post-footer {
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
