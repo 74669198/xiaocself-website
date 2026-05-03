@@ -5,9 +5,6 @@ title: 'Claude Code 高效使用技巧：从入门到丝滑'
 description: '10 个提升 Claude Code 使用效率的实战技巧，包括快捷键、上下文管理、批量操作和隐藏功能'
 tags: ['claude-code', '效率', '快捷键', '教程']
 categories: ['教程']
-cover:
-  image: '/images/tips-cover.png'
-  alt: 'Claude Code 技巧'
 ---
 
 ## 写在前面

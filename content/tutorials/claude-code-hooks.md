@@ -5,9 +5,6 @@ title: 'Claude Code Hooks 配置实战：让 AI 自动帮你收尾'
 description: '详解 Claude Code 的 Hooks 系统，从自动格式化到自动测试，配置一次受益终生'
 tags: ['claude-code', 'hooks', '自动化', '教程']
 categories: ['教程']
-cover:
-  image: '/images/hooks-cover.png'
-  alt: 'Claude Code Hooks'
 ---
 
 ## 为什么需要 Hooks？

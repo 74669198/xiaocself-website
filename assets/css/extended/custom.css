@@ -228,7 +228,7 @@ html, body, .header, .nav {
 .header-nav {
   max-width: var(--container-xl);
   margin: 0 auto;
-  padding: var(--space-3) 0;
+  padding: var(--space-2) 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -906,7 +906,7 @@ html, body, .header, .nav {
 
 .timeline-section {
   padding: var(--space-7) var(--space-4);
-  max-width: 900px;
+  max-width: var(--container-xl);
   margin: 0 auto;
 }
 
@@ -1611,6 +1611,57 @@ html, body, .header, .nav {
   .featured-scroll-card {
     flex: 0 0 260px;
   }
+}
+
+/* ============================================
+   17. ARTICLE PAGE (文章页)
+   ============================================ */
+
+/* 文章正文宽度限制，保证阅读舒适度 */
+.post-single .post-content,
+.post-single .post-header {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TOC 固定侧边栏 */
+.post-single {
+  position: relative;
+}
+
+#TableOfContents {
+  position: sticky;
+  top: 120px;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  font-size: 0.875rem;
+}
+
+#TableOfContents ul {
+  list-style: none;
+  padding-left: var(--space-3);
+  margin: 0;
+}
+
+#TableOfContents > ul {
+  padding-left: 0;
+}
+
+#TableOfContents a {
+  color: var(--text-tertiary);
+  text-decoration: none;
+  display: block;
+  padding: 3px 0;
+  line-height: var(--leading-snug);
+  transition: color var(--duration-fast) var(--ease-out);
+  border-left: 2px solid transparent;
+  padding-left: var(--space-2);
+}
+
+#TableOfContents a:hover {
+  color: var(--brand-blue);
+  border-left-color: var(--brand-blue);
 }
 
 /* ============================================
