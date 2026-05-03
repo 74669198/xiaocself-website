@@ -1,0 +1,30 @@
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if and (gt (len $pages) 1) (in $pages . ) }}
+<nav class="post-nav">
+  <div class="post-nav-header">
+    <span>继续阅读</span>
+  </div>
+  <div class="post-nav-grid">
+    {{- with $pages.Next . }}
+    <a class="post-nav-card post-nav-prev" href="{{ .Permalink }}">
+      <span class="post-nav-label">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        上一篇
+      </span>
+      <span class="post-nav-category">{{ .Section }}</span>
+      <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+    {{- end }}
+    {{- with $pages.Prev . }}
+    <a class="post-nav-card post-nav-next" href="{{ .Permalink }}">
+      <span class="post-nav-label">
+        下一篇
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </span>
+      <span class="post-nav-category">{{ .Section }}</span>
+      <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+    {{- end }}
+  </div>
+</nav>
+{{- end }}
