@@ -2184,6 +2184,77 @@ body {
   height: 20px;
 }
 
+/* ---------- SEARCH PAGE ---------- */
+.searchbox {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  font-family: var(--font-sans);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--entry);
+  color: var(--primary);
+  outline: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+#searchInput:focus {
+  border-color: var(--brand-blue);
+  box-shadow: var(--shadow-md), var(--shadow-glow-blue);
+}
+
+#searchInput::placeholder {
+  color: var(--muted);
+}
+
+.searchResults {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+
+.searchResults li {
+  margin-bottom: 16px;
+}
+
+.searchResults a {
+  display: block;
+  padding: 20px 24px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.searchResults a:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.searchResults .title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.searchResults .summary {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 /* ---------- PAGINATION ---------- */
 .pagination {
   display: flex;
