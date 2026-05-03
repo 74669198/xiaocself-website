@@ -1645,6 +1645,18 @@ body article.post-single > div.post-content {
   margin-right: auto;
 }
 
+/* 列表页摘要截断 */
+.compact-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  line-height: var(--leading-relaxed);
+  margin: var(--space-2) 0 0;
+}
+
 /* TOC 固定侧边栏 */
 .post-single {
   position: relative;
