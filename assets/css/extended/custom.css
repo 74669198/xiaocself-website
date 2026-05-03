@@ -254,18 +254,31 @@ html, body, .header, .nav {
   opacity: 0.85;
 }
 
+.logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-decoration: none;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.logo-link:hover { opacity: 0.75; }
+
 .logo-primary {
-  font-size: 1.0625rem;
-  font-weight: var(--font-bold);
+  font-size: 1.375rem;
+  font-weight: var(--font-extrabold);
+  letter-spacing: -0.04em;
   color: var(--text-primary);
-  letter-spacing: -0.03em;
+  line-height: 1;
 }
 
 .logo-secondary {
-  font-size: 1.0625rem;
-  font-weight: var(--font-normal);
-  color: var(--text-tertiary);
-  letter-spacing: 0.01em;
+  font-size: 0.5rem;
+  font-weight: var(--font-medium);
+  letter-spacing: 0.38em;
+  color: var(--text-muted);
+  line-height: 1;
 }
 
 @keyframes brandPulse {
