@@ -1621,7 +1621,10 @@ html, body, .header, .nav {
 .post-single .post-content,
 .post-single .post-header,
 .post-single .post-body,
-.post-single .post-footer {
+.post-single .post-footer,
+article.post-single > div,
+article.post-single > header,
+article.post-single > footer {
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
