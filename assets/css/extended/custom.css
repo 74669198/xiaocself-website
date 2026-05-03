@@ -2202,6 +2202,48 @@ html, body, .header, .nav, .post-entry, .bento-card, .featured-scroll-card,
   height: 20px;
 }
 
+/* ---------- TAGS / TERMS PAGE ---------- */
+.terms-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.terms-tags li {
+  display: inline-block;
+}
+
+.terms-tags a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.terms-tags a:hover {
+  background: var(--gradient-brand);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+}
+
+.terms-tags a:active {
+  transform: translateY(0);
+}
+
 /* ---------- SEARCH PAGE ---------- */
 .searchbox {
   max-width: 640px;
