@@ -246,4 +246,4 @@ Claude Code 最适合这样的场景：
 
 *最后更新：2026年5月1日*
 
-*如果你有任何问题或想交流，欢迎在 GitHub 上找到我：[@xiaocself](https://github.com/xiaocself)*
+*如果你有任何问题或想交流，欢迎在 GitHub 上找到我：[@xiaocself](https://github.com/74669198/xiaocself-website)*

@@ -687,7 +687,7 @@ Hooks 让你可以在特定时机执行自定义操作：
 
 - [Claude Code 官方文档](https://docs.anthropic.com/en/docs/claude-code/overview)
 - [Anthropic API 文档](https://docs.anthropic.com/en/api/getting-started)
-- [本文配套的 GitHub 模板仓库](https://github.com/xiaocself/claude-code-settings-templates)
+- [本文配套的 GitHub 模板仓库](https://github.com/74669198/xiaocself-website)
 
 ---
 

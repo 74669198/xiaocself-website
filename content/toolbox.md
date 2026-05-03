@@ -109,4 +109,4 @@ tags: ['工具', '推荐']
 
 ---
 
-*如果你有好的工具推荐，欢迎通过 [GitHub](https://github.com/xiaocself) 或邮件告诉我。*
+*如果你有好的工具推荐，欢迎通过 [GitHub](https://github.com/74669198/xiaocself-website) 或邮件告诉我。*

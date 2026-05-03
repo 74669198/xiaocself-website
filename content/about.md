@@ -67,7 +67,7 @@ description: '关于这个网站、作者的故事，以及为什么做这个网
 
 如果你有任何问题、建议，或者想交流 AI 工具的使用经验，可以通过以下方式联系：
 
-- **GitHub**: [xiaocself](https://github.com/xiaocself)（网站源码也在上面）
+- **GitHub**: [xiaocself](https://github.com/74669198/xiaocself-website)（网站源码也在上面）
 - **邮箱**: xiaocself@proton.me
 
 **注意**：

@@ -96,7 +96,7 @@ description: '小c的自我修养网站隐私政策'
 如有任何隐私相关问题，请通过以下方式联系：
 
 - 邮箱：xiaocself@proton.me
-- GitHub：[github.com/xiaocself](https://github.com/xiaocself)
+- GitHub：[github.com/xiaocself](https://github.com/74669198/xiaocself-website)
 
 ---
 
