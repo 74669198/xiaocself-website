@@ -1219,6 +1219,8 @@ html, body, .header, .nav {
   padding: 0;
   margin-top: var(--space-9);
   background: var(--footer-bg);
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .footer-inner {
@@ -1238,6 +1240,7 @@ html, body, .header, .nav {
 
 .footer-brand {
   max-width: 320px;
+  text-align: left;
 }
 
 .footer-brand-name {
