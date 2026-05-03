@@ -54,15 +54,40 @@
 <script>
 (function() {
   var bar = document.querySelector('#reading-progress .reading-progress-bar');
-  if (!bar) return;
-  function update() {
-    var scrollTop = window.scrollY || document.documentElement.scrollTop;
-    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = progress + '%';
+  if (bar) {
+    function updateProgress() {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = progress + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress, { passive: true });
+    updateProgress();
   }
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update, { passive: true });
-  update();
+
+  // TOC active highlighting
+  var tocLinks = document.querySelectorAll('.post-toc-sidebar .toc a');
+  var headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
+  if (tocLinks.length && headings.length) {
+    function updateTocActive() {
+      var scrollPos = window.scrollY + 120;
+      var activeId = '';
+      for (var i = headings.length - 1; i >= 0; i--) {
+        if (headings[i].offsetTop <= scrollPos) {
+          activeId = headings[i].id;
+          break;
+        }
+      }
+      tocLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (activeId && link.getAttribute('href') === '#' + activeId) {
+          link.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', updateTocActive, { passive: true });
+    updateTocActive();
+  }
 })();
 </script>
