@@ -90,11 +90,6 @@ theme = 'PaperMod'
   url = '/search/'
   weight = 55
 
-[[menu.main]]
-  identifier = 'privacy'
-  name = '隐私政策'
-  url = '/privacy/'
-  weight = 60
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

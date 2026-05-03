@@ -189,9 +189,9 @@ body {
 
 #menu a {
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--secondary);
-  padding: 8px 14px;
+  padding: 7px 12px;
   border-radius: 50px;
   transition: var(--transition);
   position: relative;
@@ -1859,27 +1859,6 @@ body {
 
 [data-theme="dark"] .toc a:hover {
   color: var(--brand-blue-light);
-}
-
-/* ---------- THEME TOGGLE ---------- */
-#theme-toggle {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--entry);
-  border: 1px solid var(--border);
-  color: var(--secondary);
-  transition: var(--transition);
-}
-
-#theme-toggle:hover {
-  background: var(--brand-blue);
-  color: white;
-  border-color: var(--brand-blue);
-  transform: rotate(15deg);
 }
 
 /* ---------- SCROLLBAR ---------- */
