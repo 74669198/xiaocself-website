@@ -1033,6 +1033,60 @@ body {
   z-index: 1;
 }
 
+.bento-cover-placeholder {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(245, 158, 11, 0.04));
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .bento-cover-placeholder {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(245, 158, 11, 0.05));
+}
+
+.bento-card[data-category="cases"] .bento-cover-placeholder {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(236, 72, 153, 0.04));
+}
+
+[data-theme="dark"] .bento-card[data-category="cases"] .bento-cover-placeholder {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(236, 72, 153, 0.05));
+}
+
+.bento-card[data-category="tools"] .bento-cover-placeholder {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08), rgba(139, 92, 246, 0.04));
+}
+
+[data-theme="dark"] .bento-card[data-category="tools"] .bento-cover-placeholder {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.05));
+}
+
+.bento-card[data-category="about"] .bento-cover-placeholder {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(14, 165, 233, 0.04));
+}
+
+[data-theme="dark"] .bento-card[data-category="about"] .bento-cover-placeholder {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(14, 165, 233, 0.05));
+}
+
+.bento-cover-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.bento-cover-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
 .bento-large {
   grid-column: span 2;
   grid-row: span 1;

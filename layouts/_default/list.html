@@ -71,7 +71,16 @@
 
     <article class="{{ $class }}" data-category="{{ $page.Section }}" data-index="{{ $index }}">
       {{- $isHidden := ($page.Param "cover.hiddenInList") | default ($page.Param "cover.hidden") | default false }}
-      {{- partial "cover.html" (dict "cxt" $page "IsSingle" false "isHidden" $isHidden) }}
+      {{- $cover := partial "cover.html" (dict "cxt" $page "IsSingle" false "isHidden" $isHidden) }}
+      {{- if $cover }}
+        {{- $cover }}
+      {{- else }}
+      <div class="bento-cover-placeholder">
+        {{- $emoji := dict "tutorials" "📖" "cases" "🔧" "tools" "⚙️" "about" "👋" }}
+        <span class="bento-cover-emoji">{{ index $emoji $page.Section | default "📝" }}</span>
+        <span class="bento-cover-label">{{ $page.Section }}</span>
+      </div>
+      {{- end }}
       <div class="bento-content">
         <div class="bento-meta">
           <span class="bento-category">{{ $page.Section }}</span>
