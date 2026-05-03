@@ -223,10 +223,10 @@ body {
   margin-left: 4px;
 }
 
-#theme-toggle {
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
+.theme-toggle, #theme-toggle {
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,13 +234,18 @@ body {
   border: none;
   color: var(--secondary);
   transition: var(--transition);
-  padding: 0;
+  padding: 0 !important;
 }
 
-#theme-toggle:hover {
+.theme-toggle:hover, #theme-toggle:hover {
   background: rgba(14, 165, 233, 0.1);
   color: var(--brand-blue);
   transform: rotate(15deg);
+}
+
+.theme-toggle svg, #theme-toggle svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* ---------- HERO ---------- */
@@ -252,6 +257,8 @@ body {
   padding: 80px 24px 60px;
   overflow: hidden;
   background: var(--hero-bg);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .hero-bg {
@@ -320,6 +327,10 @@ body {
   line-height: 1.15;
   margin-bottom: 24px;
   letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15em;
 }
 
 .gradient-text {
