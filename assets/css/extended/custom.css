@@ -849,7 +849,7 @@ html, body, .header, .nav {
 }
 
 .category-visual {
-  height: 120px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -862,7 +862,7 @@ html, body, .header, .nav {
 }
 
 .category-emoji {
-  font-size: 3rem;
+  font-size: 2rem;
   transition: transform var(--duration-slow) var(--ease-bounce);
 }
 
