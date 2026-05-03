@@ -840,12 +840,13 @@ body {
 }
 
 .timeline-marker {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  width: auto;
+  min-width: 64px;
+  height: 40px;
+  border-radius: 20px;
   background: var(--gradient-brand);
   color: white;
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -854,6 +855,15 @@ body {
   position: relative;
   z-index: 1;
   box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+  padding: 0 16px;
+  letter-spacing: 0.02em;
+}
+
+.timeline-future .timeline-marker {
+  background: var(--theme-elevated);
+  color: var(--muted);
+  border: 2px dashed var(--border);
+  box-shadow: none;
 }
 
 .timeline-content h4 {
@@ -1378,6 +1388,43 @@ body {
   padding: 0;
   font-size: 0.9rem;
   line-height: 1.65;
+}
+
+/* Code copy button */
+.copy-code {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  color: var(--muted);
+  background: var(--theme-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.post-content pre:hover .copy-code,
+.copy-code:focus {
+  opacity: 1;
+}
+
+.copy-code:hover {
+  background: var(--brand-blue);
+  color: white;
+  border-color: var(--brand-blue);
+}
+
+.copy-code.copied {
+  background: #3fb950;
+  color: white;
+  border-color: #3fb950;
+  opacity: 1;
 }
 
 .post-content blockquote {
@@ -1954,6 +2001,54 @@ body {
 
 [data-theme="dark"] .share-copy.copied {
   color: var(--brand-blue-light);
+}
+
+/* ---------- READING PROGRESS ---------- */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 101;
+  background: transparent;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-brand);
+  transition: width 0.1s linear;
+}
+
+/* ---------- BACK TO TOP ---------- */
+.top-link {
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+}
+
+.top-link:hover {
+  background: var(--gradient-brand);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
+}
+
+.top-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ---------- RESPONSIVE ---------- */

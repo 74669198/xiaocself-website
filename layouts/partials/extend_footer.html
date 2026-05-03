@@ -48,3 +48,21 @@
     </div>
   </div>
 </footer>
+
+<div class="reading-progress" id="reading-progress"><div class="reading-progress-bar"></div></div>
+
+<script>
+(function() {
+  var bar = document.querySelector('#reading-progress .reading-progress-bar');
+  if (!bar) return;
+  function update() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = progress + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
