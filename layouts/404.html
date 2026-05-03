@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="not-found">
+  <div class="not-found-code">404</div>
+  <div class="not-found-terminal">
+    <div class="terminal-line">
+      <span class="terminal-prompt">~</span>
+      <span class="terminal-cursor">$</span>
+      <span class="terminal-command"> curl https://xiaocself.top{{ .RelPermalink }}</span>
+    </div>
+    <div class="terminal-line terminal-output">
+      <span class="terminal-error">curl: (6) Could not resolve host: this-page</span>
+    </div>
+    <div class="terminal-line terminal-output">
+      <span class="terminal-comment">  这个页面不存在，或者已经被我删掉了。</span>
+    </div>
+    <div class="terminal-line">
+      <span class="terminal-prompt">~</span>
+      <span class="terminal-cursor">$</span>
+      <span class="terminal-command"> ls /posts/ | grep "你可能会感兴趣的"</span>
+    </div>
+  </div>
+  <div class="not-found-actions">
+    <a href="/" class="btn-glow">返回首页</a>
+    <a href="/tutorials/" class="btn-outline">浏览教程</a>
+  </div>
+</div>
+{{ end }}
