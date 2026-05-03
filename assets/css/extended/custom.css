@@ -1452,7 +1452,8 @@ html, body, .header, .nav {
   }
 
   .hero-right {
-    order: -1;
+    order: 1;
+    justify-content: center;
   }
 
   .terminal-window {
@@ -1490,6 +1491,12 @@ html, body, .header, .nav {
 
   .footer-top {
     flex-direction: column;
+  }
+
+  .footer-links {
+    gap: var(--space-5);
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
