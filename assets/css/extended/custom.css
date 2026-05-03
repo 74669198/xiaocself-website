@@ -1341,6 +1341,30 @@ body {
   transform: translateY(-1px);
 }
 
+/* ---------- PAGE LOAD ANIMATION ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section,
+.bento-section,
+.featured-section,
+.categories-section,
+.timeline-section,
+.cta-section,
+.stats-section,
+.post-single,
+.compact-list {
+  animation: fadeInUp 0.6s ease-out;
+}
+
 /* ---------- ARTICLE CONTENT ---------- */
 .post-content {
   font-size: 1.05rem;
@@ -1684,7 +1708,7 @@ body {
 
 /* ---------- POST SINGLE ---------- */
 .post-single {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -2234,5 +2258,21 @@ body {
   .share-section {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .header {
+    padding: 6px 12px;
+    max-width: calc(100vw - 24px);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .header::-webkit-scrollbar {
+    display: none;
+  }
+  .logo a {
+    font-size: 1rem;
+  }
+  #menu a {
+    padding: 6px 10px;
+    font-size: 0.82rem;
   }
 }
