@@ -169,6 +169,10 @@
    2. BASE STYLES (基础样式)
    ============================================ */
 
+.main {
+  padding-top: 0;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
