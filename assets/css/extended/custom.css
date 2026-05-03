@@ -1879,6 +1879,15 @@ body {
   color: var(--brand-blue-light);
 }
 
+/* Force TOC open in sidebar */
+.post-toc-sidebar .toc summary {
+  display: none;
+}
+
+.post-toc-sidebar .toc .inner {
+  display: block !important;
+}
+
 /* ---------- POST NAVIGATION ---------- */
 .post-nav {
   margin-top: 60px;
