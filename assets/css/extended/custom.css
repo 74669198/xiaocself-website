@@ -188,7 +188,7 @@ body {
   font-size: 16px;
   line-height: var(--leading-relaxed);
   color: var(--text-secondary);
-  background: var(--bg-primary);
+  background: var(--bg-primary) !important;
   transition: background-color var(--duration-normal) var(--ease-out),
               color var(--duration-normal) var(--ease-out);
 }
@@ -339,7 +339,7 @@ html, body, .header, .nav {
 .hero-section {
   position: relative;
   min-height: calc(100vh - 101px);
-  max-height: 800px;
+  max-height: calc(100vh - 101px);
   display: flex;
   align-items: center;
   padding: var(--space-6) var(--space-4);
@@ -360,7 +360,7 @@ html, body, .header, .nav {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: var(--space-8);
   max-width: var(--container-xl);
   margin: 0 auto;
