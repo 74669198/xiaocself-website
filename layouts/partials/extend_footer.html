@@ -66,6 +66,21 @@
     updateProgress();
   }
 
+  // Header scroll effect
+  var header = document.querySelector('.header');
+  if (header) {
+    function updateHeader() {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > 80) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+  }
+
   // TOC active highlighting
   var tocLinks = document.querySelectorAll('.post-toc-sidebar .toc a');
   var headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
