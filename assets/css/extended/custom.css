@@ -254,26 +254,33 @@ html, body, .header, .nav {
   opacity: 0.85;
 }
 
-.logo-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3px 10px;
-  border-radius: var(--radius-md);
+.logo-mark {
+  font-size: 1.5rem;
+  font-weight: var(--font-extrabold);
+  letter-spacing: -0.04em;
   background: var(--gradient-brand);
-  color: white;
-  font-size: 0.9375rem;
-  font-weight: var(--font-bold);
-  letter-spacing: -0.01em;
-  line-height: 1.4;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
 }
 
-.logo-text {
-  font-size: 0.9375rem;
-  font-weight: var(--font-medium);
-  color: var(--text-secondary);
-  padding-left: 6px;
-  letter-spacing: -0.01em;
+.logo-slash {
+  font-size: 1.25rem;
+  font-weight: var(--font-normal);
+  color: var(--brand-orange);
+  margin: 0 5px;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.logo-sub {
+  font-size: 0.75rem;
+  font-weight: var(--font-semibold);
+  color: var(--text-tertiary);
+  letter-spacing: 0.12em;
+  text-transform: none;
+  line-height: 1;
 }
 
 @keyframes brandPulse {
