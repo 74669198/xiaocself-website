@@ -1,5 +1,6 @@
 baseURL = 'https://www.xiaocself.top'
 languageCode = 'zh-CN'
+defaultContentLanguage = 'zh-cn'
 title = '小c的自我修养'
 theme = 'PaperMod'
 
