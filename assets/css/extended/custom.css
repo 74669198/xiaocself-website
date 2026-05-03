@@ -1365,6 +1365,27 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 
+/* ---------- IMAGES ---------- */
+.post-content img {
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.8em auto;
+}
+
+.post-content figure {
+  margin: 1.8em 0;
+}
+
+.post-content figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
 /* ---------- TABLES ---------- */
 .post-content table {
   width: 100%;
@@ -2161,6 +2182,40 @@ body {
 .top-link svg {
   width: 20px;
   height: 20px;
+}
+
+/* ---------- PAGINATION ---------- */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.pagination a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.pagination a:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.pagination .next {
+  margin-inline-start: auto;
 }
 
 /* ---------- 404 PAGE ---------- */
